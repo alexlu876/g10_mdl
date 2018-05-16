@@ -53,7 +53,7 @@ void my_main() {
 
   int i;
   struct matrix *tmp;
-  struct stack *systems;
+  struct stack *csystems;
   screen t;
   zbuffer zb;
   color g;

@@ -96,7 +96,7 @@ void my_main() {
   sreflect[GREEN] = 0.5;
   sreflect[BLUE] = 0.5;
 
-  systems = new_stack();
+  csystems = new_stack();
   tmp = new_matrix(4, 1000);
   clear_screen( t );
   clear_zbuffer(zb);
@@ -168,7 +168,7 @@ void my_main() {
 
     case PUSH:
       push(csystems);
-      brea;k
+      break;
 
     case POP:
       pop(csystems);

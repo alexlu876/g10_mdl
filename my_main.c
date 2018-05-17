@@ -108,6 +108,22 @@ void my_main() {
     
     switch(op[i].opcode){
         
+    case PUSH:
+      push(csystems);
+      break;
+
+    case POP:
+      pop(csystems);
+      break;
+
+    case DISPLAY:
+      display(t);
+      break;
+
+    case SAVE:
+      save_extension(t, op[i].op.save.p->name);
+      break;
+        
     case SPHERE:
       add_sphere(tmp, op[i].op.sphere.d[0],op[i].op.sphere.d[1],op[i].op.sphere.d[2],op[i].op.sphere.r,step_3d);
       matrix_mult(peek(csystems), tmp);
@@ -165,22 +181,7 @@ void my_main() {
       copy_matrix(tmp, peek(csystems));
       tmp->lastcol=0;
       break;
-
-    case PUSH:
-      push(csystems);
-      break;
-
-    case POP:
-      pop(csystems);
-      break;
-
-    case DISPLAY:
-      display(t);
-      break;
-
-    case SAVE:
-      save_extension(t, op[i].op.save.p->name);
-      break;
+        
     }
   }
 }

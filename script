@@ -1,4 +1,13 @@
-box 0 0 0 100 100 100
-rotate x 20
-move 30 30 30
 push
+rotate x 20
+rotate y 50
+rotate z 30
+torus 60 60 60 10 30
+box 100 100 100 200 225 250
+push
+move 50 0 50
+rortate z 80
+torus 200 200 200 30 70
+push
+display
+save random.png
